@@ -14,8 +14,7 @@ process.stdin.on('readable', function() {
                 process.stdout.write('hello!\n');
                 break;
             case '/getOSinfo':
-                var info = OSinfo.print();
-                process.stdout.write(info);
+                OSinfo.print();
                 break;
             default:
                 process.stderr.write('Wrong instruction!\n');
